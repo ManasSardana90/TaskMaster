@@ -129,7 +129,9 @@ const App = () => {
   if (!token) {
     return (
       <div className="login-container">
-        <h1 className="title">TaskMaster</h1>
+        <h1 className="title"><img src="/logo.png" alt="TaskMaster Logo" className="logo"/>
+        TaskMaster
+        </h1>
         <div className="login-form">
           <h2>Login</h2>
           {error && <p style={{ color: 'red' }}>{error}</p>}
