@@ -2,6 +2,10 @@
 
 TaskMaster is a simple and secure to-do list application built with React and Node.js. Users can register, log in, and manage their tasks. It supports OAuth authentication using Google and GitHub.
 
+Link to the hosted live website using Render: (The instance will spin down with inactivity, which can delay requests by 50 seconds or more for the first time)
+   
+https://taskmasterms.onrender.com
+
 ## Features
 
 - User registration and login
@@ -32,7 +36,7 @@ TaskMaster is a simple and secure to-do list application built with React and No
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/yourusername/taskmaster.git
+   git clone https://github.com/ManasSardana90/TaskMaster.git
    cd taskmaster
    ```
 
