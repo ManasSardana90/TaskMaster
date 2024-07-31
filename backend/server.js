@@ -43,8 +43,8 @@ mongoose.connect(process.env.MONGO_URI)
 const userSchema = new mongoose.Schema({
   username: { type: String, unique: true, required: true },
   password: { type: String, required: true },
-  googleId: String,
-  githubId: String,
+  googleId: { type: String, unique: true, sparse: true },
+  githubId: { type: String, unique: true, sparse: true },
 });
 
 const todoSchema = new mongoose.Schema({
