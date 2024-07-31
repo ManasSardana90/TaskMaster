@@ -40,12 +40,13 @@ mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log('Connected to MongoDB Atlas'))
   .catch(err => console.error('Could not connect to MongoDB Atlas', err));
 
-const userSchema = new mongoose.Schema({
-  username: { type: String, unique: true, required: true },
-  password: { type: String, required: true },
-  googleId: { type: String, unique: true, sparse: true },
-  githubId: { type: String, unique: true, sparse: true },
-});
+  const userSchema = new mongoose.Schema({
+    username: { type: String, unique: true, required: true },
+    password: { type: String },
+    googleId: { type: String, unique: true, sparse: true },
+    githubId: { type: String, unique: true, sparse: true },
+  });
+  
 
 const todoSchema = new mongoose.Schema({
   userId: mongoose.Schema.Types.ObjectId,
