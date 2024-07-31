@@ -24,6 +24,7 @@ const App = () => {
     }
   }, []);
 
+  // Effect to fetch todos whenever the token changes
   useEffect(() => {
     const fetchTodos = async () => {
       try {
@@ -41,6 +42,7 @@ const App = () => {
     }
   }, [token]);
 
+  // Function to handle user registration
   const register = async () => {
     if (!username || !password) {
       setError('Username and password are required');
@@ -58,6 +60,7 @@ const App = () => {
     }
   };
 
+  // Function to handle user login
   const login = async () => {
     if (!username || !password) {
       setError('Username and password are required');
@@ -76,6 +79,7 @@ const App = () => {
     }
   };
 
+  // Function to handle user logout
   const logout = () => {
     setToken('');
     setTodos([]);
@@ -85,6 +89,7 @@ const App = () => {
     setError(null);
   };
 
+  // Function to add a new todo
   const addTodo = async () => {
     if (text.trim() === '') {
       setError('Text is required');
@@ -164,6 +169,7 @@ const App = () => {
     );
   }
 
+  // Render the todo list if the user is logged in
   return (
     <div className="app-container">
       <header>
